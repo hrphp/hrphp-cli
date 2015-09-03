@@ -1,0 +1,25 @@
+{
+  "name": "hrphp/hrphp-cli",
+  "description": "CLI tool for HRPHP related shenanigans.",
+  "require": {
+    "php": ">=5.5",
+    "symfony/console": "~2.6",
+    "phing/phing": "@stable",
+    "kherge/box": "~2.0",
+    "guzzlehttp/guzzle": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hrphp\\Cli\\": "src/library/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HrphpTest\\Cli\\": "tests/library/"
+    }
+  }
+}
