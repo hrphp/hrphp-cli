@@ -1,0 +1,27 @@
+{
+  "chmod": "0755",
+  "directories": ["src", "vendor"],
+  "main": "./bin/hrphp",
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": [
+        "herrera-io",
+        "kherge",
+        "phpseclib",
+        "phpunit",
+        "phing",
+        "squizlabs",
+        "tests",
+        "doc",
+        "docs",
+        "Tests",
+        "yaml"
+      ],
+      "in": "vendor"
+    }
+  ],
+  "output": "hrphp.phar",
+  "git-version": "package_version",
+  "stub": true
+}
