@@ -30,6 +30,7 @@ class PingCommandTest extends \PHPUnit_Framework_TestCase
     {
         $commandTester = $this->getCommandTester('ping');
         $output = $commandTester->getDisplay();
+        self::assertContains(sprintf('command', HRPHP_URL), $output);
         self::assertContains(sprintf('%s is up!', HRPHP_URL), $output);
     }
 

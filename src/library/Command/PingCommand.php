@@ -45,6 +45,7 @@ class PingCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $output->writeln(sprintf('<info>%s command</info>', $this->getName()));
         $response = $this->getClient()->get(HRPHP_URL);
         /*
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
