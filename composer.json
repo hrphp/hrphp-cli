@@ -3,7 +3,6 @@
   "description": "CLI tool for HRPHP related shenanigans.",
   "require": {
     "symfony/console": "~2.6",
-    "phing/phing": "@stable",
     "kherge/box": "~2.0",
     "guzzlehttp/guzzle": "*"
   },
