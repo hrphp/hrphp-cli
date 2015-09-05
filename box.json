@@ -10,13 +10,11 @@
         "kherge",
         "phpseclib",
         "phpunit",
-        "phing",
         "squizlabs",
-        "tests",
-        "doc",
-        "docs",
-        "Tests",
-        "yaml"
+        "*/tests",
+        "*/*/tests",
+        "*/Tests",
+        "*/*/Tests"
       ],
       "in": "vendor"
     }
