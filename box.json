@@ -1,7 +1,7 @@
 {
   "chmod": "0755",
   "directories": ["src", "vendor"],
-  "main": "./bin/hrphp",
+  "main": "bin/hrphp",
   "finder": [
     {
       "name": "*.php",
@@ -11,10 +11,9 @@
         "phpseclib",
         "phpunit",
         "squizlabs",
-        "*/tests",
-        "*/*/tests",
-        "*/Tests",
-        "*/*/Tests"
+        "tests",
+        "Tests",
+        "yaml"
       ],
       "in": "vendor"
     }
