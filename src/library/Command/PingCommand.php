@@ -37,24 +37,31 @@ class PingCommand extends Command
         return $this->client;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         $this->setName('ping')
             ->setDescription('Pings the HRPHP website');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln(sprintf('<info>%s command</info>', $this->getName()));
         $response = $this->getClient()->get(HRPHP_URL);
-        /*
+
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
             $output->writeln(sprintf('Attempting to hit %s at %s...', HRPHP_URL, date('H:i:s A')));
         }
+
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERY_VERBOSE) {
             $output->writeln(sprintf('Ping being sent from %s...', gethostname()));
         }
-        */
+
         if ($response->getStatusCode() === 200) {
             $output->writeln(sprintf('%s is up!', HRPHP_URL));
         }
