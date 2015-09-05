@@ -1,0 +1,17 @@
+tools:
+  external_code_coverage: true
+  php_sim: true
+  php_pdepend: true
+  php_analyzer: true
+  php_code_sniffer:
+    config:
+      standard: "PSR2"
+filter:
+  excluded_paths:
+    - 'reports/*'
+    - 'tests/*'
+    - 'vendor/*'
+build_failure_conditions:
+  - 'issues.label("coding-style").exists'
+  - 'project.metric("scrutinizer.quality", < 8)'
+  - 'project.metric("scrutinizer.test_coverage", < 0.80)'

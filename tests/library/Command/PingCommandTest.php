@@ -14,6 +14,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use Hrphp\Cli\Command\PingCommand;
 use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Tester\CommandTester;
 
 class PingCommandTest extends \PHPUnit_Framework_TestCase
@@ -32,6 +33,26 @@ class PingCommandTest extends \PHPUnit_Framework_TestCase
         $output = $commandTester->getDisplay();
         self::assertContains(sprintf('command', HRPHP_URL), $output);
         self::assertContains(sprintf('%s is up!', HRPHP_URL), $output);
+    }
+
+    public function testVerbosePing()
+    {
+        $commandTester = $this->getCommandTester(
+            'ping',
+            [ 'verbosity' => OutputInterface::VERBOSITY_VERBOSE ]
+        );
+        $output = $commandTester->getDisplay();
+        self::assertContains('Attempting to hit', $output);
+    }
+
+    public function testVeryVerbosePing()
+    {
+        $commandTester = $this->getCommandTester(
+            'ping',
+            [ 'verbosity' => OutputInterface::VERBOSITY_VERY_VERBOSE ]
+        );
+        $output = $commandTester->getDisplay();
+        self::assertContains('Ping being sent from', $output);
     }
 
     protected function setUp()
@@ -58,13 +79,14 @@ class PingCommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @param string $commandName
+     * @param array $options
      * @return CommandTester
      */
-    protected function getCommandTester($commandName)
+    protected function getCommandTester($commandName, array $options = [])
     {
         $command = $this->getApplication()->find($commandName);
         $commandTester = new CommandTester($command);
-        $commandTester->execute(array_merge(array('command' => $commandName)));
+        $commandTester->execute(['command' => $commandName], $options);
         return $commandTester;
     }
 
