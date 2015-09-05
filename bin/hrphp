@@ -15,6 +15,7 @@ if (!defined('APPLICATION_ENV')) {
     define('APPLICATION_ENV', 'production');
 }
 define('APPLICATION_PATH', dirname(__DIR__));
+define('HRPHP_URL', 'http://hrphp.org');
 
 // load dependencies!
 require APPLICATION_PATH . '/vendor/autoload.php';
