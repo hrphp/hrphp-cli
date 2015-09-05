@@ -1,5 +1,5 @@
 # hrphp-cli
-[![Travis branch](https://img.shields.io/travis/hrphp/hrphp-cli.svg?style=flat)](https://travis-ci.org/hrphp/hrphp-cli) [![Coverage Status](http://img.shields.io/scrutinizer/coverage/g/hrphp/hrphp-cli.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/hrphp-cli/?branch=master) [![Code Quality](http://img.shields.io/scrutinizer/g/hrphp/hrphp-cli.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/hrphp-cli/?branch=master) [![HHVM](https://img.shields.io/hhvm/hrphp/hrphp-cli.svg?style=flat)](http://hhvm.h4cc.de/package/hrphp/hrphp-cli.json)
+[![Travis branch](https://img.shields.io/travis/hrphp/hrphp-cli.svg?style=flat)](https://travis-ci.org/hrphp/hrphp-cli) [![Coverage Status](http://img.shields.io/scrutinizer/coverage/g/hrphp/hrphp-cli.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/hrphp-cli/?branch=master) [![Code Quality](http://img.shields.io/scrutinizer/g/hrphp/hrphp-cli.svg?style=flat)](https://scrutinizer-ci.com/g/hrphp/hrphp-cli/?branch=master)
 
 CLI tool for HRPHP related shenanigans.
 
