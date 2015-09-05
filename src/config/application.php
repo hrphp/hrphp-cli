@@ -10,10 +10,6 @@ use Symfony\Component\Console\Application;
 use Hrphp\Cli\Command\PingCommand;
 use GuzzleHttp\Client as GuzzleClient;
 
-// portal URL
-define('HRPHP_URL', 'http://hrphp.org');
-
-// configure the application
 try {
     $client = new GuzzleClient();
     $application = new Application('HRPHP CLI', '@package_version@');

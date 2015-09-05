@@ -11,7 +11,7 @@ date_default_timezone_set('America/New_York');
 define('APPLICATION_ENV', 'test');
 
 define('APPLICATION_PATH', dirname(__DIR__));
-chdir(APPLICATION_PATH);
+define('HRPHP_URL', 'http://hrphp.org');
 
 require 'vendor/autoload.php';
 require 'src/config/application.php';
